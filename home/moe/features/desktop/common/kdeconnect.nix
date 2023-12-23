@@ -39,8 +39,4 @@ in
   xdg.configFile = {
     "kdeconnect-scripts/fortune.sh".source = "${script-fortune}/bin/fortune";
   };
-
-  home.persistence = {
-    "/persist/home/moe".directories = [ ".config/kdeconnect" ];
-  };
 }

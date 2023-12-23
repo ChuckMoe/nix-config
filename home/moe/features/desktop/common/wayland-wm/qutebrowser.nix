@@ -3,16 +3,6 @@
 let inherit (config.colorscheme) colors kind;
 in
 {
-  home.persistence = {
-    "/persist/home/moe".directories = [
-      ".config/qutebrowser/bookmarks"
-      ".config/qutebrowser/greasemonkey"
-      ".local/share/qutebrowser"
-    ];
-  };
-
-
-
   xdg.mimeApps.defaultApplications = {
     "text/html" = [ "org.qutebrowser.qutebrowser.desktop" ];
     "text/xml" = [ "org.qutebrowser.qutebrowser.desktop" ];
@@ -20,7 +10,6 @@ in
     "x-scheme-handler/https" = [ "org.qutebrowser.qutebrowser.desktop" ];
     "x-scheme-handler/qute" = [ "org.qutebrowser.qutebrowser.desktop" ];
   };
-
 
   programs.qutebrowser = {
     enable = true;

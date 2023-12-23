@@ -9,7 +9,4 @@
       prompt = "enabled";
     };
   };
-  home.persistence = {
-    "/persist/home/moe".directories = [ ".config/gh" ];
-  };
 }

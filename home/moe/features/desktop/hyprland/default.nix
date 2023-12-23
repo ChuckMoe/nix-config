@@ -176,7 +176,7 @@
       # Notification manager
       (lib.optionals config.services.mako.enable [
         "SUPER,w,exec,${makoctl} dismiss"
-      ]) ++
+      ]);
 
       monitor = map (m: let
         resolution = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
