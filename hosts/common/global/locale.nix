@@ -1,13 +1,14 @@
 { lib, ... }: {
   i18n = {
-    defaultLocale = lib.mkDefault "en_US.UTF-8";
+    defaultLocale = lib.mkDefault "en_GB.UTF-8";
     extraLocaleSettings = {
-      LC_TIME = lib.mkDefault "pt_BR.UTF-8";
+      LC_TIME = lib.mkDefault "de_DE.UTF-8";
     };
     supportedLocales = lib.mkDefault [
-      "en_US.UTF-8/UTF-8"
-      "pt_BR.UTF-8/UTF-8"
+      "en_GB.UTF-8/UTF-8"
+      "de_DE.UTF-8/UTF-8"
     ];
   };
-  time.timeZone = lib.mkDefault "America/Sao_Paulo";
+  console.keyMap = "de";
+  time.timeZone = "Europe/Berlin";
 }

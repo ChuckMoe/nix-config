@@ -4,10 +4,10 @@ let
   homeSharePaths = lib.mapAttrsToList (n: v: "${v.home.path}/share") homeCfgs;
   vars = ''XDG_DATA_DIRS="$XDG_DATA_DIRS:${lib.concatStringsSep ":" homeSharePaths}"'';
 
-  misterioCfg = homeCfgs.misterio;
-  gtkTheme = misterioCfg.gtk.theme;
-  iconTheme = misterioCfg.gtk.iconTheme;
-  wallpaper = misterioCfg.wallpaper;
+  moeCfg = homeCfgs.moe;
+  gtkTheme = moeCfg.gtk.theme;
+  iconTheme = moeCfg.gtk.iconTheme;
+  wallpaper = moeCfg.wallpaper;
 
   sway-kiosk = command: "${lib.getExe pkgs.sway} --config ${pkgs.writeText "kiosk.config" ''
     output * bg #000000 solid_color

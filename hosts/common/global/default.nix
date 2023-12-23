@@ -2,19 +2,15 @@
 { inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./acme.nix
     ./auto-upgrade.nix
     ./fish.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
-    ./optin-persistence.nix
     ./podman.nix
     ./sops.nix
-    ./ssh-serve-store.nix
     ./steam-hardware.nix
     ./systemd-initrd.nix
-    ./tailscale.nix
     ./gamemode.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
@@ -34,7 +30,6 @@
   };
 
   hardware.enableRedistributableFirmware = true;
-  networking.domain = "m7.rs";
 
   # Increase open file limit for sudoers
   security.pam.loginLimits = [
