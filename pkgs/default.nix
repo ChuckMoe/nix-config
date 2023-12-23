@@ -2,7 +2,6 @@
 
   # Packages with an actual source
   rgbdaemon = pkgs.callPackage ./rgbdaemon { };
-  shellcolord = pkgs.callPackage ./shellcolord { };
   trekscii = pkgs.callPackage ./trekscii { };
 
   # Personal scripts

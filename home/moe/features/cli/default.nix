@@ -12,7 +12,6 @@
     ./pfetch.nix
     ./ranger.nix
     ./screen.nix
-    ./shellcolor.nix
     ./ssh.nix
     ./starship.nix
   ];
